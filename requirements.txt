@@ -1,3 +1,7 @@
 streamlit
 pandas
 altair
+string
+copy
+nltk
+re
