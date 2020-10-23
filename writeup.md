@@ -6,6 +6,7 @@
 1- Goals of the project
 
 1.1 Aim
+
 The interest in our project was to trace and reveal the dynamics of a conversation through data visualization. We explored the potential of visualization to capture and represent converstaional dynamics.
  
 1.2 Site and Data                                                                                                                                                              Our site was the first “Presidential Debate of the 2020 Elections” that took place on September 19th 2020 between President Donald J. Trump and former Vice President and Presidential candidate Joe Biden. The debate was moderated by journalist and television anchor Chris Wallace. We refer to them as “actors” in this project. We worked with a transcript of the debate that allowed us to do text processing on a corpus of the debate conversation. Text processing allowed us to extract and visualize various dimensions of the conversation.
