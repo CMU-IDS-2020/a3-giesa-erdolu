@@ -37,17 +37,26 @@ others. The questions we looked at were:
      the thematic words emphasized more by each candidate and what was the weight of that emphasis by a candidate compared to the other?
    - What were the weights that each candidate put in pointing to themselves and pointing fingers to others? 
  
-We believe these questions point to important dynamics in a presidential debate that are significant matters of discussion within the political realm and media, and that essentially affect mass perception. So, we aim to shed light on these dimensions by visualizing the conversation.  
+We believe these questions point to important dynamics in a presidential debate that are significant matters of discussion within the political realm and media, and that 
+essentially affect mass perception. So, we aim to shed light on these dimensions by visualizing the conversation.  
  
-To investigate these questions, we identified a list of dimensions to search and visualize within the debate conversation. These dimensions are described in the “Design Process” section. Essentially, this required extracting our own data -related to these dimensions- from the transcript of the debate. So, the prototype we built included text processing, data extraction and framing, and visualization. 
+To investigate these questions, we identified a list of dimensions to search and visualize within the debate conversation. These dimensions are described in the “Design 
+Process” section. Essentially, this required extracting our own data -related to these dimensions- from the transcript of the debate. So, the prototype we built included text 
+processing, data extraction and framing, and visualization. 
  
 1.4 Framework
-For text processing, data extraction, and data framing, we used NLTK (a language processing library for Python) and pandas (a data analysis library for Python). For data visualization, we used Streamlit (an open source app framework) and Altair (a data visualization library for Python).  
+
+For text processing, data extraction, and data framing, we used NLTK (a language processing library for Python) and pandas (a data analysis library for Python). For data 
+visualization, we used Streamlit (an open source app framework) and Altair (a data visualization library for Python).  
  
 
 2- Design Process
 
-2.1 Qualitative Evaluation of the Conversation                                                                                                                                The initial step was going over the transcript. A careful reading and qualitative evaluation of the text allowed us to identify the dimensions of the conversation we wanted to search in investigating the questions. This step also involved sketching and brainstorming on the preliminary design ideas on the ways these dimensions could potentially be visualized.
+2.1 Qualitative Evaluation of the Conversation                                                                                                                                
+
+The initial step was going over the transcript. A careful reading and qualitative evaluation of the text allowed us to identify the dimensions of the conversation we wanted to 
+search in investigating the questions. This step also involved sketching and brainstorming on the preliminary design ideas on the ways these dimensions could potentially be 
+visualized.
  
 Workflow
 (Emek + Katherine) 
@@ -55,13 +64,15 @@ Workflow
 This step was a collaborative effort by both members. Combined with step 2, this step took about a quarter of the work time.
  
 2.2 Identifying the Dimensions of Conversation 
+
 To investigate the questions in Part 1, we defined:
    - Actor-Time: This dimension shows who was speaking at a particular moment in the conversation and patterns of interaction between the moderator and candidates (moments of 
      intervention) as well as between the candidates (moments of debate). It also shows the length of these patterns. 
    - Number of Words-Time: This dimension shows an incremental count of words by each actor on a particular moment in the conversation. It shows who had spoken the most up to a 
      certain moment in the conversation. It also shows how the weight of each actor changed throughout the conversation.
    - Number of Words-Order of Speech: This dimension shows an incremental count of words by each actor over the course of the conversation. It shows who had spoken the most up 
-     to a certain order of speech (order count of turns of speech e.g. fifty fourth turn) in the conversation. It also shows how the weight of each actor changed throughout the      conversation.
+     to a certain order of speech (order count of turns of speech e.g. fifty fourth turn) in the conversation. It also shows how the weight of each actor changed throughout the 
+     conversation.
    - Number of Interruptions-Time: This dimension shows an incremental count of interruptions* made by each actor over the course of the conversation. It also shows the 
      moments of interruptions by each actor. It provides hints about this particular speech attitude of each actor within a period or throughout the entire conversation. 
      *Interruptions were marked with ‘—’ in the transcript.
@@ -74,7 +85,8 @@ To investigate the questions in Part 1, we defined:
      whose speeches were broken by the crosstalks the most up to a certain order of speech in the conversation. It also shows how this number changed for each actor throughout 
      the conversation.
  
-All these dimensions involve a temporality to show the aspect (e.g. actor, number of words, etc.) within a moment or period in the conversation as well as through the overall conversation. Based on that, more refined ideas were discussed and produced for the visualizations of these dimensions. 
+All these dimensions involve a temporality to show the aspect (e.g. actor, number of words, etc.) within a moment or period in the conversation as well as through the overall 
+conversation. Based on that, more refined ideas were discussed and produced for the visualizations of these dimensions. 
  
 To investigate the questions in Part 2, we outlined:
    - the 6 themes that the debate conversation included: healthcare, covid, economy, environment, race, and election. These themes were generally set by Chris Wallace. Using 
@@ -109,7 +121,8 @@ The dimensions below show the same information described for healthcare the othe
    - Word Count-Actor-Pointing to Self and Fingers to Others: This dimension shows a total count of “Pointing to Self and Fingers to Others” (PSFO) words (“you” “he” and “I”) 
      used by each actor. It shows the weight of pointing to self and pointing fingers to others by each actor in the conversation.  
  
-as the dimensions to be extracted as data by processing the conversation text and to be visualized for insights. All these dimensions involve the notion of “thematic weight” within a period in the conversation as well as through the overall conversation. More refined ideas were discussed and produced for the visualizations of these dimensions.
+as the dimensions to be extracted as data by processing the conversation text and to be visualized for insights. All these dimensions involve the notion of “thematic weight” 
+within a period in the conversation as well as through the overall conversation. More refined ideas were discussed and produced for the visualizations of these dimensions.
  
 Workflow
 (Emek + Katherine) 
@@ -117,7 +130,10 @@ Workflow
 This step was a collaborative effort by both members. Combined with step 1, this step took about a quarter of total work time.
  
 2.3 Text Processing, Data Extraction, and Data Framing
-From here, we began processing the conversation text to extract the identified dimensions. These dimensions became the categories in the data that constituted the two data frames that were used in creating the visualizations. These data frames were carefully discussed between the team members and created according to the ways the intended visualizations required. 
+
+From here, we began processing the conversation text to extract the identified dimensions. These dimensions became the categories in the data that constituted the two data 
+frames that were used in creating the visualizations. These data frames were carefully discussed between the team members and created according to the ways the intended 
+visualizations required. 
  
 The first data frame contains the data ordered by Order of Speech and Time. It was structured as follows: 
    - df1 = {Order of Speech: [], Actor: [], Time: [], Number of Words: [], Number of Interruptions: [], Number of Crosstalks: [], Number of Number Use: [], Number of 
@@ -139,6 +155,7 @@ Part of the code that extracts the data on the rest of dimensions in Part 2. Thi
 Overall, this step involved coordinative and divided work. It took approximately half of the total work time.
 
 2.4 Creating Interactive Data Visualizations 
+
 Based on the dimensions and two data frames, we produced two sets of visualizations for the application: “Through the debate” set and “Thematic weights within the debate” set.
  
 a- Through the debate
@@ -153,7 +170,8 @@ Visualizations:
    - Mini-map bar chart → Mini-map + (Actor-Number of Crosstalks-Time)
    - Zoomable line chart → (Number of Crosstalks-Order of Speech)
  
-Minimap bar charts were designed to allow a user to traverse the debate to see the dimensions in Part 1. The user can do it in two ways: (1) By brushing over a mini-map of the debate to create a time frame and moving it (2) By using the “Order of Speech” slider and sliding between the n(th) orders of speech. 
+Minimap bar charts were designed to allow a user to traverse the debate to see the dimensions in Part 1. The user can do it in two ways: (1) By brushing over a mini-map of the 
+debate to create a time frame and moving it (2) By using the “Order of Speech” slider and sliding between the n(th) orders of speech. 
  
 Each minimap bar chart was made of a set of charts:
    - A mini-map: A map of the debate that allows the user to create a time frame by brushing and travel through the matrix chart and bar chart by moving the frame.
@@ -190,51 +208,61 @@ We chose these interactions because we wanted the user to be able to:
 b- Thematic weights within the debate
  
 Visualizations:
-Mini-map bar chart → Minimap + (Actor - Number of Healthcare - Time)
-Zoomable line chart → (Number of Healthcare - Order of Speech) 
+   - Mini-map bar chart → Minimap + (Actor-Number of Healthcare-Time)
+   - Zoomable line chart → (Number of Healthcare-Order of Speech) 
  
-Mini-map bar chart → Minimap + (Actor - Number of Covid- Time) 
-Zoomable line chart → (Number of Covid - Order of Speech)
+   - Mini-map bar chart → Minimap + (Actor-Number of Covid-Time) 
+   - Zoomable line chart → (Number of Covid-Order of Speech)
  
-Mini-map bar chart → Minimap + (Actor - Number of Economy - Time) 
-Zoomable line chart → (Number of Economy - Order of Speech)
+   - Mini-map bar chart → Minimap + (Actor-Number of Economy-Time) 
+   - Zoomable line chart → (Number of Economy-Order of Speech)
  
-Mini-map bar chart → Minimap + (Actor - Number of Environment - Time) 
-Zoomable line chart → (Number of Environment - Order of Speech)
+   - Mini-map bar chart → Minimap + (Actor-Number of Environment-Time) 
+   - Zoomable line chart → (Number of Environment-Order of Speech)
  
-Mini-map bar chart → Minimap + (Actor - Number of Race - Time) 
-Zoomable line chart → (Number of Race - Order of Speech)
+   - Mini-map bar chart → Minimap + (Actor-Number of Race-Time) 
+   - Zoomable line chart → (Number of Race-Order of Speech)
  
-Mini-map bar chart → Minimap + (Actor - Number of Election - Time) 
-Zoomable line chart → (Number of Election - Order of Speech)
+   - Mini-map bar chart → Minimap + (Actor-Number of Election-Time) 
+   - Zoomable line chart → (Number of Election-Order of Speech)
  
-Linked bar chart → Word Count - Theme
-Linked bar chart → Word Count - Actor - Theme Words
+   - Linked bar chart → Word Count-Theme
+   - Linked bar chart → Word Count-Actor-Theme Words
  
-Bar chart  →  Word Count - Actor - Pointing to self and others
- 
+   - Bar chart  →  Word Count-Actor-Pointing to self and others
  
 Each minimap bar chart and zoomable line chart was designed in exactly the same ways described above. We chose these interactions for the same reasons described above.
  
 The linked bar charts we designed was made of:
-A bar chart: A chart that maps Word Count (on Y axis) on Theme (on X axis) with color coded bars that represent Word Count and Actor. It shows the total counts of theme words for each theme (both by Biden and Trump) by stacking the bars. It allows the user to compare the weight of themes in the overall conversation. It also allows the user to compare the weight of themes between the actors by comparing the size of stacked bars. The chart also has a tooltip interaction that shows the Actor on each bar. Each bar that is mapped to a theme can also be selected by clicking. This selection makes the second linked bar show a breakdown of the counts into theme words by each actor.
-A bar chart: A chart that is linked to the first one, and that maps Word Count (on Y axis) on Actor (on X axis) and Theme Words (on column) with color coded bars that represent Word Count and Actor under each Theme Word. It shows the total count of each theme word by Actor. It also shows the weight of theme words within each theme. It also allows the user to compare the emphasis of theme words across the actors by comparing the size of bars. The chart also has a tooltip interaction that shows the Word Count on each bar. 
+   - A bar chart: A chart that maps Word Count (on Y axis) on Theme (on X axis) with color coded bars that represent Word Count and Actor. It shows the total counts of theme 
+     words for each theme (both by Biden and Trump) by stacking the bars. It allows the user to compare the weight of themes in the overall conversation. It also allows the 
+     user to compare the weight of themes between the actors by comparing the size of stacked bars. The chart also has a tooltip interaction that shows the Actor on each bar. 
+     Each bar that is mapped to a theme can also be selected by clicking. This selection makes the second linked bar show a breakdown of the counts into theme words by each 
+     actor.
+  - A bar chart: A chart that is linked to the first one, and that maps Word Count (on Y axis) on Actor (on X axis) and Theme Words (on column) with color coded bars that 
+    represent Word Count and Actor under each Theme Word. It shows the total count of each theme word by Actor. It also shows the weight of theme words within each theme. It 
+    also allows the user to compare the emphasis of theme words across the actors by comparing the size of bars. The chart also has a tooltip interaction that shows the Word 
+    Count on each bar. 
  
-For example, clicking on the bar that indicates the “Covid” theme Word Count, will allow the user to see a side by side comparison of the “Covid” theme word (“vaccine”, “mask”, “death”, “dying”, “covid”) counts by each actor. 
+    For example, clicking on the bar that indicates the “Covid” theme Word Count, will allow the user to see a side by side comparison of the “Covid” theme word (“vaccine”, 
+    “mask”, “death”, “dying”, “covid”) counts by each actor. 
  
 We chose these interactions because we wanted the user to be able to:
-see various layers of information in two charts
-see overall by default and breakdowns by selection
-make comparisons of counts, weights, and emphasis by counts and size of things (such as bars stacked or next to each other)
-check details (counts by tooltips, if necessary)
+    - see various layers of information in two charts
+    - see overall by default and breakdowns by selection
+    - make comparisons of counts, weights, and emphasis by counts and size of things (such as bars stacked or next to each other)
+    - check details (counts by tooltips, if necessary)
  
 The bar chart we designed:
-A bar chart: A chart that maps Word Count (on Y axis) on Actor (on X axis) and “Pointing to Self and Fingers to Others” (PSFO) words (“You”, “He”, “I”) (on column) with color coded bars that represent Word Count and Actor under each PSFO word. It shows the total count of each PSFO word by Actor. It also allows the user to compare the emphasis of PSFO words across the actors by comparing the size of bars. The chart has a selection option with click that highlights PSFO Word Count by actor. The chart also has a tooltip interaction that shows the Word Count on each bar. 
+    - A bar chart: A chart that maps Word Count (on Y axis) on Actor (on X axis) and “Pointing to Self and Fingers to Others” (PSFO) words (“You”, “He”, “I”) (on column) with 
+      color coded bars that represent Word Count and Actor under each PSFO word. It shows the total count of each PSFO word by Actor. It also allows the user to compare the 
+      emphasis of PSFO words across the actors by comparing the size of bars. The chart has a selection option with click that highlights PSFO Word Count by actor. The chart 
+      also has a tooltip interaction that shows the Word Count on each bar. 
  
 We chose these interactions because we wanted the user to be able to:
-see overall by default and breakdowns by selection
-make comparisons of counts and emphasis by counts and size of things (such as bars next to each other)
-check details (counts by tooltips, if necessary)
+   - see overall by default and breakdowns by selection
+   - make comparisons of counts and emphasis by counts and size of things (such as bars next to each other)
+   - check details (counts by tooltips, if necessary)
  
 Workflow
 (Emek) 
