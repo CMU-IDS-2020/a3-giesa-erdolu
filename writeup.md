@@ -243,10 +243,10 @@ The linked bar charts we designed was made of:
     “mask”, “death”, “dying”, “covid”) counts by each actor. 
  
 We chose these interactions because we wanted the user to be able to:
-    - see various layers of information in two charts
-    - see overall by default and breakdowns by selection
-    - make comparisons of counts, weights, and emphasis by counts and size of things (such as bars stacked or next to each other)
-    - check details (counts by tooltips, if necessary)
+   - see various layers of information in two charts
+   - see overall by default and breakdowns by selection
+   - make comparisons of counts, weights, and emphasis by counts and size of things (such as bars stacked or next to each other)
+   - check details (counts by tooltips, if necessary)
  
 The bar chart we designed:
     - A bar chart: A chart that maps Word Count (on Y axis) on Actor (on X axis) and “Pointing to Self and Fingers to Others” (PSFO) words (“You”, “He”, “I”) (on column) with 
@@ -261,7 +261,8 @@ We chose these interactions because we wanted the user to be able to:
  
 Workflow
    - (Emek) Part of the code that creates the visualizations of the “Through the debate” set. 
-   - (Emek + Katherine) Part of the code that creates a part of the visualizations of the “Thematic weights within the debate” set (mini-map - bar chart - line chart combinations). 
+   - (Emek + Katherine) Part of the code that creates a part of the visualizations of the “Thematic weights within the debate” set (mini-map - bar chart - line chart 
+     combinations). 
    - (Katherine) Part of the code that creates the rest of the visualizations of the “Thematic weights within the debate” set (linked bar chart - bar chart combinations). 
  
 Overall, this step involved coordinative and divided work. It took about a quarter of the total work time.
