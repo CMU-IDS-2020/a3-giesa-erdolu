@@ -23,8 +23,8 @@ The question that we explored in the project, and that the prototype we built in
 
 Part 1- First, we were interested in tracing the trajectory of the conversation between the actors. We were interested in the weight and speech attitude of the actors 
 throughout the conversation. The questions we looked at were:
-   - What was the weight of each actor in terms of their presence in the conversation? What were the moments in the debate where the conversation was between the   
-     candidates? How long were these moments? What were the moments of intervention by the moderator?
+   - What was the weight of each actor in terms of their presence in the conversation? What were the moments in the debate where the conversation was between the candidates? 
+     How long were these moments? What were the moments of intervention by the moderator?
    - Which actor spoke the most? If we take that as part of “weight”, how did that weight develop for each actor throughout the conversation? Which actor interrupted the 
      others the most? If we take that as part of “attitude”, how did that attitude follow throughout the conversation? Which actor’s speech was broken by crosstalks the 
      most?
