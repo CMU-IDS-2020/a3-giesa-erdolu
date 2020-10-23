@@ -193,7 +193,7 @@ Each minimap bar chart was followed by:
      It also allows the user to compare them on a moment, within an interval, or throughout the conversation. The line chart can be navigated by zooming in / out and panning to 
      move forward or backward along the Order of Speech*. It can also be navigated by the slider. It also has a tooltip interaction that shows the Number of Words along the 
      line by each Order of Speech.
-     *Order of Speech is essentially linked to Time as each Order of Speech is time stamped. However, different than Time, Order of Speech indicates how many turns of speech  
+     *Order of Speech is essentially linked to Time as each Order of Speech is time stamped. However, different than Time, Order of Speech indicates how many turns of speech 
      preceded the current. For example, Order of Speech = 335 means the debate has passed 334 turns of speech by different actors. The 335th turn was by Joe Biden and it   
      started on 41:41. 
  
