@@ -1,4 +1,4 @@
-# Tracing the Presidential Debate 2020. 
+# Tracing the Presidential Debate 2020
 
 ![A screenshot of your application. Could be a GIF.](presDebSS.png)
 
