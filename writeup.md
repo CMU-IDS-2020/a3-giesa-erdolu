@@ -58,8 +58,7 @@ search in investigating the questions. This step also involved sketching and bra
 visualized.
  
 Workflow
-(Emek + Katherine) 
- 
+   - (Emek + Katherine)
 This step was a collaborative effort by both members. Combined with step 2, this step took about a quarter of the work time.
  
 2.2 Identifying the Dimensions of Conversation 
