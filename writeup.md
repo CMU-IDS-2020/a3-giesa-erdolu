@@ -102,7 +102,7 @@ Based on the themes, we defined:
    the weight that actors put on healthcare up to a certain order of speech in the conversation. It also shows how the weight that each actor put on healthcare changed 
    throughout the conversation. It also shows the windows in the conversation in which healthcare was discussed as well as the length of that window.
  
-The dimensions below show the same information described for healthcare the other 5 themes.
+The dimensions below show the same information described for healthcare for the other 5 themes.
    - Number of Covid-Order of Speech
    - Number of Economy-Time
    - Number of Economy-Order of Speech
