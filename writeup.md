@@ -58,15 +58,15 @@ To investigate the questions in Part 1, we defined:
    - Number of Crosstalks-Time: This dimension shows an incremental count of crosstalks* during an actor’s speech over the course of the conversation. It also shows the moments 
      of crosstalk. It provides hints about how this particular speech attitude occurred within a period or throughout the entire conversation. 
      *Interruptions were marked as “[crosstalk hh:mm:ss]” in the transcript.
-   - Number of Crosstalks - Order of Speech: This dimension shows an incremental count of crosstalks during an actor’s speech over the course of the conversation. It shows 
+   - Number of Crosstalks-Order of Speech: This dimension shows an incremental count of crosstalks during an actor’s speech over the course of the conversation. It shows 
      whose speeches were broken by the crosstalks the most up to a certain order of speech in the conversation. It also shows how this number changed for each actor throughout 
      the conversation.
  
 All these dimensions involve a temporality to show the aspect (e.g. actor, number of words, etc.) within a moment or period in the conversation as well as through the overall conversation. Based on that, more refined ideas were discussed and produced for the visualizations of these dimensions. 
  
 To investigate the questions in Part 2, we outlined:
-   - the 6 themes that the debate conversation included: healthcare, covid, economy, environment, race, and election. These themes were generally set by Chris Wallace.  
-     Using these themes, we qualitatively selected frequently used, or key thematic words associated with the broad theme. For example, 'mask' and 'vaccine' were two of the key 
+   - the 6 themes that the debate conversation included: healthcare, covid, economy, environment, race, and election. These themes were generally set by Chris Wallace. Using 
+     these themes, we qualitatively selected frequently used, or key thematic words associated with the broad theme. For example, 'mask' and 'vaccine' were two of the key 
      words related to covid. 
    - a list of thematic words under each time that are used in the conversation*
    *This was by our qualitative evaluation of the debate transcript.
@@ -80,19 +80,22 @@ Based on the themes, we defined:
    throughout the conversation. It also shows the windows in the conversation in which healthcare was discussed as well as the length of that window.
  
 The dimensions below show the same information described for healthcare the other 5 themes.
-Number of Covid - Order of Speech
-Number of Economy - Time
-Number of Economy - Order of Speech
-Number of Environment - Time
-Number of Environment - Order of Speech
-Number of Race - Time
-Number of Race - Order of Speech
-Number of Election - Time
-Number of Election - Order of Speech
+   - Number of Covid - Order of Speech
+   - Number of Economy - Time
+   - Number of Economy - Order of Speech
+   - Number of Environment - Time
+   - Number of Environment - Order of Speech
+   - Number of Race - Time
+   - Number of Race - Order of Speech
+   - Number of Election - Time
+   - Number of Election - Order of Speech
  
-Word Count - Theme: This dimension shows a total count of words related to a particular theme by each actor. It shows the weight that actors put on each theme in the conversation and the weight of the theme in the conversation overall.
-Word Count - Actor - Word: This dimension shows a total count of each thematic word used by each actor. It shows the emphasis that actors put on each thematic word and thereby the theme in the conversation. 
-Word Count - Actor - Pointing to Self and Fingers to Others: This dimension shows a total count of “Pointing to Self and Fingers to Others” (PSFO) words (“you” “he” and “I”) used by each actor. It shows the weight of pointing to self and pointing fingers to others by each actor in the conversation.  
+   - Word Count-Theme: This dimension shows a total count of words related to a particular theme by each actor. It shows the weight that actors put on each theme in the 
+     conversation and the weight of the theme in the conversation overall.
+   - Word Count-Actor-Word: This dimension shows a total count of each thematic word used by each actor. It shows the emphasis that actors put on each thematic word and thereby 
+     the theme in the conversation. 
+   - Word Count-Actor-Pointing to Self and Fingers to Others: This dimension shows a total count of “Pointing to Self and Fingers to Others” (PSFO) words (“you” “he” and “I”) 
+     used by each actor. It shows the weight of pointing to self and pointing fingers to others by each actor in the conversation.  
  
 as the dimensions to be extracted as data by processing the conversation text and to be visualized for insights. All these dimensions involve the notion of “thematic weight” within a period in the conversation as well as through the overall conversation. More refined ideas were discussed and produced for the visualizations of these dimensions.
  
@@ -105,10 +108,11 @@ This step was a collaborative effort by both members. Combined with step 1, this
 From here, we began processing the conversation text to extract the identified dimensions. These dimensions became the categories in the data that constituted the two data frames that were used in creating the visualizations. These data frames were carefully discussed between the team members and created according to the ways the intended visualizations required. 
  
 The first data frame contains the data ordered by Order of Speech and Time. It was structured as follows: 
-df1 = {Order of Speech: [], Actor: [], Time: [], Number of Words: [], Number of Interruptions: [], Number of Crosstalks: [], Number of Number Use: [], Number of Healthcare: [], Number of Covid: [], Number of Environment: [], Number of Election: [], Number of Economy: [], Number of Race: []} 
+   - df1 = {Order of Speech: [], Actor: [], Time: [], Number of Words: [], Number of Interruptions: [], Number of Crosstalks: [], Number of Number Use: [], Number of 
+     Healthcare: [], Number of Covid: [], Number of Environment: [], Number of Election: [], Number of Economy: [], Number of Race: []} 
  
 The second data frame is ordered by the Theme Words. It was structured as follows: 
-df2 = {Theme Word: [], Broad Theme: [], Actor: [], Word Count: []}
+   - df2 = {Theme Word: [], Broad Theme: [], Actor: [], Word Count: []}
  
 Workflow
 (Emek) 
@@ -128,40 +132,48 @@ Based on the dimensions and two data frames, we produced two sets of visualizati
 a- Through the debate
  
 Visualizations:
-Mini-map bar chart → Mini-map + (Actor - Number of Words - Time) 
-Zoomable line chart → (Number of Words - Order of Speech) 
+   - Mini-map bar chart → Mini-map + (Actor-Number of Words-Time) 
+   - Zoomable line chart → (Number of Words-Order of Speech) 
  
-Mini-map bar chart → Mini-map + (Actor - Number of Interruptions - Time) 
-Zoomable line chart → (Number of Interruptions - Order of Speech)
+   - Mini-map bar chart → Mini-map + (Actor-Number of Interruptions-Time) 
+   - Zoomable line chart → (Number of Interruptions-Order of Speech)
  
-Mini-map bar chart → Mini-map + (Actor - Number of Crosstalks - Time)
-Zoomable line chart → (Number of Crosstalks - Order of Speech)
- 
+   - Mini-map bar chart → Mini-map + (Actor-Number of Crosstalks-Time)
+   - Zoomable line chart → (Number of Crosstalks-Order of Speech)
  
 Minimap bar charts were designed to allow a user to traverse the debate to see the dimensions in Part 1. The user can do it in two ways: (1) By brushing over a mini-map of the debate to create a time frame and moving it (2) By using the “Order of Speech” slider and sliding between the n(th) orders of speech. 
  
 Each minimap bar chart was made of a set of charts:
-A mini-map: A map of the debate that allows the user to create a time frame by brushing and travel through the matrix chart and bar chart by moving the frame.
-A matrix chart: A chart that maps Actor (on Y axis) on Time (on X axis hidden*) with color coded squares that represent Actor. It shows patterns of intervention by the moderator, and patterns and lengths of debate between the candidates. The matrix chart can be navigated through the mini-map or slider which is in sync with the bar chart.
-A bar chart: A chart that maps Number of “something” (e.g. Number of Words, Number of Interruptions, etc.) (on Y axis) on Time (on X axis) with color coded bars that represent Number of “something” and Actor. It shows the incremental counts and allows to compare them across the actors on a moment, within an interval, or throughout the conversation. The bar chart can also be navigated through the mini-map or slider which is in sync with the matrix chart. It also has a tooltip interaction that shows the Actor and Number of Words on each bar.
-*The matrix chart and bar chart were aligned and they both use the bar chart’s X axis that shows time. 
+   - A mini-map: A map of the debate that allows the user to create a time frame by brushing and travel through the matrix chart and bar chart by moving the frame.
+   - A matrix chart: A chart that maps Actor (on Y axis) on Time (on X axis hidden*) with color coded squares that represent Actor. It shows patterns of intervention by the 
+     moderator, and patterns and lengths of debate between the candidates. The matrix chart can be navigated through the mini-map or slider which is in sync with the bar chart.
+   - A bar chart: A chart that maps Number of “something” (e.g. Number of Words, Number of Interruptions, etc.) (on Y axis) on Time (on X axis) with color coded bars that 
+     represent Number of “something” and Actor. It shows the incremental counts and allows to compare them across the actors on a moment, within an interval, or throughout the      conversation. The bar chart can also be navigated through the mini-map or slider which is in sync with the matrix chart. It also has a tooltip interaction that shows the 
+     Actor and Number of Words on each bar.
+     *The matrix chart and bar chart were aligned and they both use the bar chart’s X axis that shows time. 
  
 We chose these interactions because we wanted the user to be able to:
-navigate through the timeline of the conversation (by mini-map or slider)
-focus on a moment or a timeframe (by brushing on the mini-map or slider)
-make comparisons by looking at the positions (such as Actor squares) or size of things (such as bars next to each other)
-check details (counts by tooltips, if necessary)
+   - navigate through the timeline of the conversation (by mini-map or slider)
+   - focus on a moment or a timeframe (by brushing on the mini-map or slider)
+   - make comparisons by looking at the positions (such as Actor squares) or size of things (such as bars next to each other)
+     check details (counts by tooltips, if necessary)
  
 Each minimap bar chart was followed by:
-A zoomable line chart: A line chart that maps Number of “something” (e.g. Number of Words, Number of Interruptions, etc.) (on Y axis) on Order of Speech (on X axis) with color coded lines that represent Number of “something” and Actor. It shows trajectories of counts by each actor in relation to each other and throughout the conversation. It also allows the user to compare them on a moment, within an interval, or throughout the conversation. The line chart can be navigated by zooming in / out and panning to move forward or backward along the Order of Speech*. It can also be navigated by the slider. It also has a tooltip interaction that shows the Number of Words along the line by each Order of Speech.
-*Order of Speech is essentially linked to Time as each Order of Speech is time stamped. However, different than Time, Order of Speech indicates how many turns of speech preceded the current. For example, Order of Speech = 335 means the debate has passed 334 turns of speech by different actors. The 335th turn was by Joe Biden and it started on 41:41. 
+   - A zoomable line chart: A line chart that maps Number of “something” (e.g. Number of Words, Number of Interruptions, etc.) (on Y axis) on Order of Speech (on X axis) with 
+     color coded lines that represent Number of “something” and Actor. It shows trajectories of counts by each actor in relation to each other and throughout the conversation. 
+     It also allows the user to compare them on a moment, within an interval, or throughout the conversation. The line chart can be navigated by zooming in / out and panning to 
+     move forward or backward along the Order of Speech*. It can also be navigated by the slider. It also has a tooltip interaction that shows the Number of Words along the 
+     line by each Order of Speech.
+     *Order of Speech is essentially linked to Time as each Order of Speech is time stamped. However, different than Time, Order of Speech indicates how many turns of speech  
+     preceded the current. For example, Order of Speech = 335 means the debate has passed 334 turns of speech by different actors. The 335th turn was by Joe Biden and it   
+     started on 41:41. 
  
 We chose these interactions because we wanted the user to be able to:
-see an overall trajectory at a glance 
-make comparisons by seeing the trajectory lines next to each other
-check details (by zooming in, or counts by tooltips, if necessary)
-navigate through the conversation (by panning or slider)
-focus on a particular turn or a range of turns
+   - see an overall trajectory at a glance 
+   - make comparisons by seeing the trajectory lines next to each other
+   - check details (by zooming in, or counts by tooltips, if necessary)
+   - navigate through the conversation (by panning or slider)
+   - focus on a particular turn or a range of turns
  
 b- Thematic weights within the debate
  
