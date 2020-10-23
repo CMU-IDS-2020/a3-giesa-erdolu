@@ -1,6 +1,6 @@
 # Tracing the Presidential Debate 2020
 
-![A screenshot of your application. Could be a GIF.](presDebSS.png)
+![A screenshot of your application. Could be a GIF.](presDebSS.PNG)
 
 
 1- Goals of the project
