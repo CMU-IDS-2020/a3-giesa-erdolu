@@ -9,11 +9,12 @@ Tracing the Presidential Debate 2020
 
 1- Goals of the project
 1.1 Aim
-The interest in our project was to trace and reveal the dynamics of a conversation through data visualization. We explored the potential of visualization –in other words, visualizing a conversation– in capturing its dynamics that we may not otherwise by listening or by looking through its transcription.
+The interest in our project was to trace and reveal the dynamics of a conversation through data visualization. We explored the potential of visualization to capture and represent converstaional dynamics.
  
-1.2 Site and Data                                                                                                                                                                        Our site was the first “Presidential Debate of the 2020 Elections” that took place on September 19th 2020 between president Donald J. Trump and former vice president and presidential candidate Joe Biden. The debate was moderated by journalist and television anchor Chris Wallace. We refer to them as “actors” in this project.  
-We worked with a transcript of the debate that allowed us to do text processing on a corpus of the debate conversation. Text processing allowed us to extract and visualize various dimensions of the conversation that we framed to address the question explored in the project.
-1.3 Question                                                                                                                                                                                 The question that we explored in the project, and that the prototype we built in the project would enable other users to explore, was twofold.
+1.2 Site and Data                                                                                                                                                                        Our site was the first “Presidential Debate of the 2020 Elections” that took place on September 19th 2020 between President Donald J. Trump and former Vice President and Presidential candidate Joe Biden. The debate was moderated by journalist and television anchor Chris Wallace. We refer to them as “actors” in this project.  
+We worked with a transcript of the debate that allowed us to do text processing on a corpus of the debate conversation. Text processing allowed us to extract and visualize various dimensions of the conversation.
+
+1.3 Question                                                                                                                                                                                 The question that we explored in the project, and that the prototype we built in response, was twofold.
 Part 1- First, we were interested in tracing the trajectory of the conversation between the actors. We were interested in the weight and speech attitude of the actors throughout the conversation. The questions we looked at were:
 What was the weight of each actor in terms of their presence in the conversation? What were the moments in the debate where the conversation was between the candidates? How long were these moments? What were the moments of intervention by the moderator?
 Which actor spoke the most? If we take that as part of “weight”, how did that weight develop for each actor throughout the conversation? Which actor interrupted the others the most? If we take that as part of “attitude”, how did that attitude follow throughout the conversation? Which actor’s speech was broken by crosstalks the most?
@@ -23,9 +24,9 @@ What were the weights of themes / topics in the conversation? What were the wind
 What were the weights that each candidate put on the themes? Which thematic words were emphasized more within each theme / topic and across the themes / topics? What were the thematic words emphasized more by each candidate and what was the weight of that emphasis by a candidate compared to the other?
 What were the weights that each candidate put in pointing to themselves and pointing fingers to others? 
  
-We believe these questions point to some important dynamics that play part in a presidential debate, that are significant matters of discussion within the political realm and media, and that essentially affect the mass perception. So, we aim to shed light on these dimensions by visualizing the conversation.  
+We believe these questions point to important dynamics in a presidential debate that are significant matters of discussion within the political realm and media, and that essentially affect mass perception. So, we aim to shed light on these dimensions by visualizing the conversation.  
  
-To investigate these questions, we identified a list of dimensions to search within the debate conversation and visualize. These dimensions are described in the “Design Process” section. Essentially, this required extracting our own data -related to these dimensions- from the transcript of the debate. So, the prototype we built included text processing, data extraction and framing, and visualization. 
+To investigate these questions, we identified a list of dimensions to search and visualize within the debate conversation. These dimensions are described in the “Design Process” section. Essentially, this required extracting our own data -related to these dimensions- from the transcript of the debate. So, the prototype we built included text processing, data extraction and framing, and visualization. 
  
 1.4 Framework
 For text processing, data extraction, and data framing, we used NLTK (a language processing library for Python) and pandas (a data analysis library for Python). For data visualization, we used Streamlit (an open source app framework) and Altair (a data visualization library for Python).  
@@ -40,7 +41,7 @@ This step was a collaborative effort by both members. Combined with step 2, this
  
 2.2 Identifying the Dimensions of Conversation 
 To investigate the questions in Part 1, we defined:
-Actor - Time: This dimension shows who was speaking on a particular moment in the conversation and patterns of interaction between the moderator and candidates (moments of intervention) as well as between the candidates (moments of debate). It also shows the length of these patterns. 
+Actor - Time: This dimension shows who was speaking at a particular moment in the conversation and patterns of interaction between the moderator and candidates (moments of intervention) as well as between the candidates (moments of debate). It also shows the length of these patterns. 
 Number of Words - Time: This dimension shows an incremental count of words by each actor on a particular moment in the conversation. It shows who had spoken the most up to a certain moment in the conversation. It also shows how the weight of each actor changed throughout the conversation.
 Number of Words - Order of Speech: This dimension shows an incremental count of words by each actor over the course of the conversation. It shows who had spoken the most up to a certain order of speech (order count of turns of speech e.g. fifty fourth turn) in the conversation. It also shows how the weight of each actor changed throughout the conversation.
 Number of Interruptions - Time: This dimension shows an incremental count of interruptions* made by each actor over the course of the conversation. It also shows the moments of interruptions by each actor. It provides hints about this particular speech attitude of each actor within a period or throughout the entire conversation. 
@@ -50,10 +51,10 @@ Number of Crosstalks - Time: This dimension shows an incremental count of crosst
 * Interruptions were marked as “[crosstalk hh:mm:ss]” in the transcript.
 Number of Crosstalks - Order of Speech: This dimension shows an incremental count of crosstalks during an actor’s speech over the course of the conversation. It shows whose speeches were broken by the crosstalks the most up to a certain order of speech in the conversation. It also shows how this number changed for each actor throughout the conversation.
  
-as the dimensions to be extracted as data by processing the conversation text and to be visualized for insights. All these dimensions involve a temporality to show the aspect (e.g. actor, number of words, etc.) within a moment or period in the conversation as well as through the overall conversation. Based on that, more refined ideas were discussed and produced for the visualizations of these dimensions. 
+ All these dimensions involve a temporality to show the aspect (e.g. actor, number of words, etc.) within a moment or period in the conversation as well as through the overall conversation. Based on that, more refined ideas were discussed and produced for the visualizations of these dimensions. 
  
 To investigate the questions in Part 2, we outlined:
-the 6 themes that the debate conversation included: healthcare, covid, economy, environment, race, and election. 
+the 6 themes that the debate conversation included: healthcare, covid, economy, environment, race, and election. These themes were generally set by Chris Wallace. However, the initial segment as set forth by Wallace was the Supreme Court. We determined healthcare to be an important aspect of this segment and chose to focus our investigation on healthcare in this segment. In place of environment, Chris Wallace's theme was 'record.' We chose to focus on their discussion of environment within their records. Using these themes, we qualitatively selected frequently used, or key themeatic words associated with the broad theme. For example, 'mask' and 'vaccine' were key words related to covid. 
 a list of thematic words under each time that are used in the conversation*
 *This was by our qualitative evaluation of the debate transcript.
  
@@ -72,7 +73,7 @@ Number of Race - Order of Speech
 Number of Election - Time
 Number of Election - Order of Speech
  
-Word Count - Theme: This dimension shows a total count of words related to a particular theme by each actor. It shows the weight that actors put on each theme in the conversation. 
+Word Count - Theme: This dimension shows a total count of words related to a particular theme by each actor. It shows the weight that actors put on each theme in the conversation and the weight of the theme in the conversation overall.
 Word Count - Actor - Word: This dimension shows a total count of each thematic word used by each actor. It shows the emphasis that actors put on each thematic word and thereby the theme in the conversation. 
 Word Count - Actor - Pointing to Self and Fingers to Others: This dimension shows a total count of “Pointing to Self and Fingers to Others” (PSFO) words (“you” “he” and “I”) used by each actor. It shows the weight of pointing to self and pointing fingers to others by each actor in the conversation.  
  
@@ -103,6 +104,7 @@ Part of the code that extracts the data on themes over time (in Part 2). Combine
 Part of the code that extracts the data on the rest of dimensions in Part 2. This part of the code created the second data frame.
  
 Overall, this step involved coordinative and divided work. It took approximately half of the total work time.
+
 2.4 Creating Interactive Data Visualizations 
 Based on the dimensions and two data frames, we produced two sets of visualizations for the application: “Through the debate” set and “Thematic weights within the debate” set.
  
