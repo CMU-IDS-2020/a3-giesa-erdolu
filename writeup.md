@@ -181,7 +181,7 @@ We chose these interactions because we wanted the user to be able to:
    - navigate through the timeline of the conversation (by mini-map or slider)
    - focus on a moment or a timeframe (by brushing on the mini-map or slider)
    - make comparisons by looking at the positions (such as Actor squares) or size of things (such as bars next to each other)
-     check details (counts by tooltips, if necessary)
+   - check details (counts by tooltips, if necessary)
  
 Each minimap bar chart was followed by:
    - A zoomable line chart: A line chart that maps Number of “something” (e.g. Number of Words, Number of Interruptions, etc.) (on Y axis) on Order of Speech (on X axis) with 
