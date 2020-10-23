@@ -59,6 +59,7 @@ visualized.
  
 Workflow
    - (Emek + Katherine)
+
 This step was a collaborative effort by both members. Combined with step 2, this step took about a quarter of the work time.
  
 2.2 Identifying the Dimensions of Conversation 
@@ -123,7 +124,7 @@ as the dimensions to be extracted as data by processing the conversation text an
 within a period in the conversation as well as through the overall conversation. More refined ideas were discussed and produced for the visualizations of these dimensions.
  
 Workflow
-(Emek + Katherine) 
+   - (Emek + Katherine) 
  
 This step was a collaborative effort by both members. Combined with step 1, this step took about a quarter of total work time.
  
@@ -141,14 +142,9 @@ The second data frame is ordered by the Theme Words. It was structured as follow
    - df2 = {Theme Word: [], Broad Theme: [], Actor: [], Word Count: []}
  
 Workflow
-(Emek) 
-Part of the code that extracts the data on the dimensions in Part 1.
- 
-(Emek + Katherine) 
-Part of the code that extracts the data on themes over time (in Part 2). Combined with the first part of the code, this part created the first data frame.
- 
-(Katherine) 
-Part of the code that extracts the data on the rest of dimensions in Part 2. This part of the code created the second data frame.
+   - (Emek) Part of the code that extracts the data on the dimensions in Part 1.
+   - (Emek + Katherine) Part of the code that extracts the data on themes over time (in Part 2). Combined with the first part of the code, this part created the first data frame.
+   - (Katherine) Part of the code that extracts the data on the rest of dimensions in Part 2. This part of the code created the second data frame.
  
 Overall, this step involved coordinative and divided work. It took approximately half of the total work time.
 
@@ -263,13 +259,8 @@ We chose these interactions because we wanted the user to be able to:
    - check details (counts by tooltips, if necessary)
  
 Workflow
-(Emek) 
-Part of the code that creates the visualizations of the “Through the debate” set. 
- 
-(Emek + Katherine) 
-Part of the code that creates a part of the visualizations of the “Thematic weights within the debate” set (mini-map - bar chart - line chart combinations). 
- 
-(Katherine) 
-Part of the code that creates the rest of the visualizations of the “Thematic weights within the debate” set (linked bar chart - bar chart combinations). 
+   - (Emek) Part of the code that creates the visualizations of the “Through the debate” set. 
+   - (Emek + Katherine) Part of the code that creates a part of the visualizations of the “Thematic weights within the debate” set (mini-map - bar chart - line chart combinations). 
+   - (Katherine) Part of the code that creates the rest of the visualizations of the “Thematic weights within the debate” set (linked bar chart - bar chart combinations). 
  
 Overall, this step involved coordinative and divided work. It took about a quarter of the total work time.
