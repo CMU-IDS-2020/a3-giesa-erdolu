@@ -2,27 +2,28 @@
 
 ![A screenshot of your application. Could be a GIF.](presDebSS.png)
 
-Interactive Data Science                                                                                            Assignment 3: Design and Build an Interactive Data Science Application                              Katherine Giesa and Emek Erdolu
-
-
-Tracing the Presidential Debate 2020
 
 1- Goals of the project
+
 1.1 Aim
 The interest in our project was to trace and reveal the dynamics of a conversation through data visualization. We explored the potential of visualization to capture and represent converstaional dynamics.
  
-1.2 Site and Data                                                                                                                                                                        Our site was the first “Presidential Debate of the 2020 Elections” that took place on September 19th 2020 between President Donald J. Trump and former Vice President and Presidential candidate Joe Biden. The debate was moderated by journalist and television anchor Chris Wallace. We refer to them as “actors” in this project.  
-We worked with a transcript of the debate that allowed us to do text processing on a corpus of the debate conversation. Text processing allowed us to extract and visualize various dimensions of the conversation.
+1.2 Site and Data                                                                                                                                                              Our site was the first “Presidential Debate of the 2020 Elections” that took place on September 19th 2020 between President Donald J. Trump and former Vice President and Presidential candidate Joe Biden. The debate was moderated by journalist and television anchor Chris Wallace. We refer to them as “actors” in this project. We worked with a transcript of the debate that allowed us to do text processing on a corpus of the debate conversation. Text processing allowed us to extract and visualize various dimensions of the conversation.
 
-1.3 Question                                                                                                                                                                                 The question that we explored in the project, and that the prototype we built in response, was twofold.
+1.3 Question                                                                                                                                                                     The question that we explored in the project, and that the prototype we built in response, was twofold.
+
 Part 1- First, we were interested in tracing the trajectory of the conversation between the actors. We were interested in the weight and speech attitude of the actors throughout the conversation. The questions we looked at were:
-What was the weight of each actor in terms of their presence in the conversation? What were the moments in the debate where the conversation was between the candidates? How long were these moments? What were the moments of intervention by the moderator?
-Which actor spoke the most? If we take that as part of “weight”, how did that weight develop for each actor throughout the conversation? Which actor interrupted the others the most? If we take that as part of “attitude”, how did that attitude follow throughout the conversation? Which actor’s speech was broken by crosstalks the most?
+   - What was the weight of each actor in terms of their presence in the conversation? What were the moments in the debate where the conversation was between the   
+     candidates? How long were these moments? What were the moments of intervention by the moderator?
+   - Which actor spoke the most? If we take that as part of “weight”, how did that weight develop for each actor throughout the conversation? Which actor interrupted the 
+     others the most? If we take that as part of “attitude”, how did that attitude follow throughout the conversation? Which actor’s speech was broken by crosstalks the 
+     most?
  
 Part 2- Secondly, we were interested in tracing the weight of themes / topics, and their distribution throughout the conversation. We were interested in investigating the weight that each actor put on the themes / topics in the conversation. We were also interested in the weights of actors in pointing to themselves and pointing fingers to others. The questions we looked at were:
-What were the weights of themes / topics in the conversation? What were the windows in the conversation in which they were discussed? How long were those windows?
-What were the weights that each candidate put on the themes? Which thematic words were emphasized more within each theme / topic and across the themes / topics? What were the thematic words emphasized more by each candidate and what was the weight of that emphasis by a candidate compared to the other?
-What were the weights that each candidate put in pointing to themselves and pointing fingers to others? 
+   - What were the weights of themes / topics in the conversation? What were the windows in the conversation in which they were discussed? How long were those windows?
+   - What were the weights that each candidate put on the themes? Which thematic words were emphasized more within each theme / topic and across the themes / topics? What were 
+     the thematic words emphasized more by each candidate and what was the weight of that emphasis by a candidate compared to the other?
+   - What were the weights that each candidate put in pointing to themselves and pointing fingers to others? 
  
 We believe these questions point to important dynamics in a presidential debate that are significant matters of discussion within the political realm and media, and that essentially affect mass perception. So, we aim to shed light on these dimensions by visualizing the conversation.  
  
@@ -31,7 +32,9 @@ To investigate these questions, we identified a list of dimensions to search and
 1.4 Framework
 For text processing, data extraction, and data framing, we used NLTK (a language processing library for Python) and pandas (a data analysis library for Python). For data visualization, we used Streamlit (an open source app framework) and Altair (a data visualization library for Python).  
  
+
 2- Design Process
+
 2.1 Qualitative Evaluation of the Conversation                                                                                                                                The initial step was going over the transcript. A careful reading and qualitative evaluation of the text allowed us to identify the dimensions of the conversation we wanted to search in investigating the questions. This step also involved sketching and brainstorming on the preliminary design ideas on the ways these dimensions could potentially be visualized.
  
 Workflow
@@ -41,15 +44,23 @@ This step was a collaborative effort by both members. Combined with step 2, this
  
 2.2 Identifying the Dimensions of Conversation 
 To investigate the questions in Part 1, we defined:
-Actor - Time: This dimension shows who was speaking at a particular moment in the conversation and patterns of interaction between the moderator and candidates (moments of intervention) as well as between the candidates (moments of debate). It also shows the length of these patterns. 
-Number of Words - Time: This dimension shows an incremental count of words by each actor on a particular moment in the conversation. It shows who had spoken the most up to a certain moment in the conversation. It also shows how the weight of each actor changed throughout the conversation.
-Number of Words - Order of Speech: This dimension shows an incremental count of words by each actor over the course of the conversation. It shows who had spoken the most up to a certain order of speech (order count of turns of speech e.g. fifty fourth turn) in the conversation. It also shows how the weight of each actor changed throughout the conversation.
-Number of Interruptions - Time: This dimension shows an incremental count of interruptions* made by each actor over the course of the conversation. It also shows the moments of interruptions by each actor. It provides hints about this particular speech attitude of each actor within a period or throughout the entire conversation. 
-* Interruptions were marked with ‘—’ in the transcript.
-Number of Interruptions - Order of Speech: This dimension shows an incremental count of interruptions by each actor over the course of the conversation. It shows who had interrupted the most up to a certain order of speech in the conversation. It also shows how this number changed for each actor throughout the conversation.
-Number of Crosstalks - Time: This dimension shows an incremental count of crosstalks* during an actor’s speech over the course of the conversation. It also shows the moments of crosstalk. It provides hints about how this particular speech attitude occurred within a period or throughout the entire conversation. 
-* Interruptions were marked as “[crosstalk hh:mm:ss]” in the transcript.
-Number of Crosstalks - Order of Speech: This dimension shows an incremental count of crosstalks during an actor’s speech over the course of the conversation. It shows whose speeches were broken by the crosstalks the most up to a certain order of speech in the conversation. It also shows how this number changed for each actor throughout the conversation.
+   - Actor-Time: This dimension shows who was speaking at a particular moment in the conversation and patterns of interaction between the moderator and candidates (moments of 
+     intervention) as well as between the candidates (moments of debate). It also shows the length of these patterns. 
+   - Number of Words-Time: This dimension shows an incremental count of words by each actor on a particular moment in the conversation. It shows who had spoken the most up to a 
+     certain moment in the conversation. It also shows how the weight of each actor changed throughout the conversation.
+   - Number of Words-Order of Speech: This dimension shows an incremental count of words by each actor over the course of the conversation. It shows who had spoken the most up 
+     to a certain order of speech (order count of turns of speech e.g. fifty fourth turn) in the conversation. It also shows how the weight of each actor changed throughout the      conversation.
+   - Number of Interruptions-Time: This dimension shows an incremental count of interruptions* made by each actor over the course of the conversation. It also shows the 
+     moments of interruptions by each actor. It provides hints about this particular speech attitude of each actor within a period or throughout the entire conversation. 
+     *Interruptions were marked with ‘—’ in the transcript.
+   - Number of Interruptions-Order of Speech: This dimension shows an incremental count of interruptions by each actor over the course of the conversation. It shows who had 
+     interrupted the most up to a certain order of speech in the conversation. It also shows how this number changed for each actor throughout the conversation.
+   - Number of Crosstalks-Time: This dimension shows an incremental count of crosstalks* during an actor’s speech over the course of the conversation. It also shows the moments 
+     of crosstalk. It provides hints about how this particular speech attitude occurred within a period or throughout the entire conversation. 
+     *Interruptions were marked as “[crosstalk hh:mm:ss]” in the transcript.
+   - Number of Crosstalks - Order of Speech: This dimension shows an incremental count of crosstalks during an actor’s speech over the course of the conversation. It shows 
+     whose speeches were broken by the crosstalks the most up to a certain order of speech in the conversation. It also shows how this number changed for each actor throughout 
+     the conversation.
  
  All these dimensions involve a temporality to show the aspect (e.g. actor, number of words, etc.) within a moment or period in the conversation as well as through the overall conversation. Based on that, more refined ideas were discussed and produced for the visualizations of these dimensions. 
  
