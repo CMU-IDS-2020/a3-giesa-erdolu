@@ -62,16 +62,22 @@ To investigate the questions in Part 1, we defined:
      whose speeches were broken by the crosstalks the most up to a certain order of speech in the conversation. It also shows how this number changed for each actor throughout 
      the conversation.
  
- All these dimensions involve a temporality to show the aspect (e.g. actor, number of words, etc.) within a moment or period in the conversation as well as through the overall conversation. Based on that, more refined ideas were discussed and produced for the visualizations of these dimensions. 
+All these dimensions involve a temporality to show the aspect (e.g. actor, number of words, etc.) within a moment or period in the conversation as well as through the overall conversation. Based on that, more refined ideas were discussed and produced for the visualizations of these dimensions. 
  
 To investigate the questions in Part 2, we outlined:
-the 6 themes that the debate conversation included: healthcare, covid, economy, environment, race, and election. These themes were generally set by Chris Wallace. However, the initial segment as set forth by Wallace was the Supreme Court. We determined healthcare to be an important aspect of this segment and chose to focus our investigation on healthcare in this segment. In place of environment, Chris Wallace's theme was 'record.' We chose to focus on their discussion of environment within their records. Using these themes, we qualitatively selected frequently used, or key themeatic words associated with the broad theme. For example, 'mask' and 'vaccine' were key words related to covid. 
-a list of thematic words under each time that are used in the conversation*
-*This was by our qualitative evaluation of the debate transcript.
+   - the 6 themes that the debate conversation included: healthcare, covid, economy, environment, race, and election. These themes were generally set by Chris Wallace.  
+     Using these themes, we qualitatively selected frequently used, or key thematic words associated with the broad theme. For example, 'mask' and 'vaccine' were two of the key 
+     words related to covid. 
+   - a list of thematic words under each time that are used in the conversation*
+   *This was by our qualitative evaluation of the debate transcript.
  
 Based on the themes, we defined:
-Number of Healthcare - Time:  This dimension shows an incremental count of words related to healthcare by each actor on a particular moment in the conversation. It shows the weight that actors put on healthcare up to a certain moment in the conversation. It also shows how the weight that each actor put on healthcare changed throughout the conversation.
-Number of Healthcare - Order of Speech: This dimension shows an incremental count of words related to healthcare by each actor over the course of the conversation. It shows the weight that actors put on healthcare up to a certain order of speech in the conversation. It also shows how the weight that each actor put on healthcare changed throughout the conversation. It also shows the windows in the conversation in which healthcare was discussed as well as the length of that window.
+   - Number of Healthcare-Time:  This dimension shows an incremental count of words related to healthcare by each actor on a particular moment in the conversation. It shows the 
+   weight that actors put on healthcare up to a certain moment in the conversation. It also shows how the weight that each actor put on healthcare changed throughout the 
+   conversation.
+   - Number of Healthcare-Order of Speech: This dimension shows an incremental count of words related to healthcare by each actor over the course of the conversation. It shows 
+   the weight that actors put on healthcare up to a certain order of speech in the conversation. It also shows how the weight that each actor put on healthcare changed 
+   throughout the conversation. It also shows the windows in the conversation in which healthcare was discussed as well as the length of that window.
  
 The dimensions below show the same information described for healthcare the other 5 themes.
 Number of Covid - Order of Speech
