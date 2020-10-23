@@ -1050,7 +1050,6 @@ dfYouMe = dfYouMe.melt(id_vars = ["youHeI"], var_name = "name", value_name = "wo
 
 
 
-
 ##################################################################
 ## Visualization 
 ##################################################################
@@ -1319,7 +1318,10 @@ st.write("# \n")
 st.write(viz1_NumCrosstalksTime.add_selection(scales))
 
 st.write("# \n")
-st.write("### Weights within the debate")
+st.write("### Thematic weights within the debate \n")
+st.write("\n")
+st.write("#### Healthcare \n")
+st.write("##### Theme words: Affordable Care, cost, insurance, Obamacare \n")
 st.write("###### Create a window on the rectangle with your mouse. Move it to travel through the debate.")
 ## Healthcare
 st.write("# \n")
@@ -1332,6 +1334,8 @@ st.write(viz1_NumHealthcareTime.add_selection(scales))
 
 ## Covid
 st.write("# \n")
+st.write("#### Covid \n")
+st.write("##### Theme words: covid, death, dying, mask, vaccine \n")
 st.write("###### Create a window on the rectangle with your mouse. Move it to travel through the debate.")
 st.write("# \n")
 st.write(viz0_ActorTimeSmall.add_selection(brush) & viz0_ActorTime.transform_filter(brush) \
@@ -1343,6 +1347,8 @@ st.write(viz1_NumCovidTime.add_selection(scales))
 
 ## Economy
 st.write("# \n")
+st.write("#### Economy \n")
+st.write("##### Theme words: job, manufacturing, taxes, unemployment \n")
 st.write("###### Create a window on the rectangle with your mouse. Move it to travel through the debate.")
 st.write("# \n")
 st.write(viz0_ActorTimeSmall.add_selection(brush) & viz0_ActorTime.transform_filter(brush) \
@@ -1354,6 +1360,8 @@ st.write(viz1_NumEconomyTime.add_selection(scales))
 
 ## Environment 
 st.write("# \n")
+st.write("#### Enviroment \n")
+st.write("##### Theme words: energy, enviroment, fire, green \n")
 st.write("###### Create a window on the rectangle with your mouse. Move it to travel through the debate.")
 st.write("# \n")
 st.write(viz0_ActorTimeSmall.add_selection(brush) & viz0_ActorTime.transform_filter(brush) \
@@ -1365,6 +1373,8 @@ st.write(viz1_NumEnvTime.add_selection(scales))
 
 ## Race
 st.write("# \n")
+st.write("#### Race \n")
+st.write("##### Theme words: fund, law, order, peace, violence \n")
 st.write("###### Create a window on the rectangle with your mouse. Move it to travel through the debate.")
 st.write("# \n")
 st.write(viz0_ActorTimeSmall.add_selection(brush) & viz0_ActorTime.transform_filter(brush) \
@@ -1376,6 +1386,8 @@ st.write(viz1_NumRaceTime.add_selection(scales))
 
 ## Election
 st.write("# \n")
+st.write("#### Election \n")
+st.write("##### Theme words: fraud, mail, rigged, transition, vote \n")
 st.write("###### Create a window on the rectangle with your mouse. Move it to travel through the debate.")
 st.write("# \n")
 st.write(viz0_ActorTimeSmall.add_selection(brush) & viz0_ActorTime.transform_filter(brush) \
@@ -1425,7 +1437,7 @@ youMe = alt.Chart(dfYouMe).mark_bar().encode(
     tooltip = [alt.Tooltip("wordCountHeI", title = "Word Count")],
     color = colorYouMe,
     column = alt.Column("youHeI:N", sort = ["you", "he", "i"], 
-    title = "Pointing to self and others")
+    title = "Pointing to Self and Fingers to Others")
 )
 
 
@@ -1437,3 +1449,4 @@ st.write("# \n")
 st.write("###### Click on the bars to see the word count by actor.")
 st.write("# \n")
 st.write(youMe.add_selection(pickedName))
+
