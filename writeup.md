@@ -7,20 +7,31 @@
 
 1.1 Aim
 
-The interest in our project was to trace and reveal the dynamics of a conversation through data visualization. We explored the potential of visualization to capture and represent converstaional dynamics.
+The interest in our project was to trace and reveal the dynamics of a conversation through data visualization. We explored the potential of visualization to capture and 
+represent converstaional dynamics.
  
-1.2 Site and Data                                                                                                                                                              Our site was the first “Presidential Debate of the 2020 Elections” that took place on September 19th 2020 between President Donald J. Trump and former Vice President and Presidential candidate Joe Biden. The debate was moderated by journalist and television anchor Chris Wallace. We refer to them as “actors” in this project. We worked with a transcript of the debate that allowed us to do text processing on a corpus of the debate conversation. Text processing allowed us to extract and visualize various dimensions of the conversation.
+1.2 Site and Data                                                                                                                                                              
 
-1.3 Question                                                                                                                                                                     The question that we explored in the project, and that the prototype we built in response, was twofold.
+Our site was the first “Presidential Debate of the 2020 Elections” that took place on September 19th 2020 between President Donald J. Trump and former Vice President and 
+Presidential candidate Joe Biden. The debate was moderated by journalist and television anchor Chris Wallace. We refer to them as “actors” in this project. We worked with a 
+transcript of the debate that allowed us to do text processing on a corpus of the debate conversation. Text processing allowed us to extract and visualize various dimensions of 
+the conversation.
 
-Part 1- First, we were interested in tracing the trajectory of the conversation between the actors. We were interested in the weight and speech attitude of the actors throughout the conversation. The questions we looked at were:
+1.3 Question                                                                                                                                                                     
+
+The question that we explored in the project, and that the prototype we built in response, was twofold.
+
+Part 1- First, we were interested in tracing the trajectory of the conversation between the actors. We were interested in the weight and speech attitude of the actors 
+throughout the conversation. The questions we looked at were:
    - What was the weight of each actor in terms of their presence in the conversation? What were the moments in the debate where the conversation was between the   
      candidates? How long were these moments? What were the moments of intervention by the moderator?
    - Which actor spoke the most? If we take that as part of “weight”, how did that weight develop for each actor throughout the conversation? Which actor interrupted the 
      others the most? If we take that as part of “attitude”, how did that attitude follow throughout the conversation? Which actor’s speech was broken by crosstalks the 
      most?
  
-Part 2- Secondly, we were interested in tracing the weight of themes / topics, and their distribution throughout the conversation. We were interested in investigating the weight that each actor put on the themes / topics in the conversation. We were also interested in the weights of actors in pointing to themselves and pointing fingers to others. The questions we looked at were:
+Part 2- Secondly, we were interested in tracing the weight of themes / topics, and their distribution throughout the conversation. We were interested in investigating the 
+weight that each actor put on the themes / topics in the conversation. We were also interested in the weights of actors in pointing to themselves and pointing fingers to 
+others. The questions we looked at were:
    - What were the weights of themes / topics in the conversation? What were the windows in the conversation in which they were discussed? How long were those windows?
    - What were the weights that each candidate put on the themes? Which thematic words were emphasized more within each theme / topic and across the themes / topics? What were 
      the thematic words emphasized more by each candidate and what was the weight of that emphasis by a candidate compared to the other?
