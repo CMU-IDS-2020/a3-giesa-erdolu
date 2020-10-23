@@ -164,8 +164,9 @@ Visualizations:
    - Mini-map bar chart → Mini-map + (Actor-Number of Crosstalks-Time)
    - Zoomable line chart → (Number of Crosstalks-Order of Speech)
  
-Minimap bar charts were designed to allow a user to traverse the debate to see the dimensions in Part 1. The user can do it in two ways: (1) By brushing over a mini-map of the 
-debate to create a time frame and moving it (2) By using the “Order of Speech” slider and sliding between the n(th) orders of speech. 
+Minimap bar charts were designed to allow a user to traverse the debate to see the dimensions in Part 1. The user can do it in three ways: (1) By using the horizontal scroll at 
+the bottom (2) By brushing over a mini-map of the debate to create a time frame and moving it forward (3) By using the “Order of Speech” slider and sliding between the n(th) 
+orders of speech. 
  
 Each minimap bar chart was made of a set of charts:
    - A mini-map: A map of the debate that allows the user to create a time frame by brushing and travel through the matrix chart and bar chart by moving the frame.
