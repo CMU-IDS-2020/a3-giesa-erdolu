@@ -47,10 +47,7 @@ processing, data extraction and framing, and visualization.
 1.4 Framework
 
 For text processing, data extraction, and data framing, we used NLTK (a language processing library for Python) and pandas (a data analysis library for Python). For data 
-visualization, we used Streamlit (an open source app framework) and Altair (a data visualization library for Python).  
- 
-
-
+visualization, we used Streamlit (an open source app framework) and Altair (a data visualization library for Python).
 
 2- Design Process
 
@@ -106,15 +103,15 @@ Based on the themes, we defined:
    throughout the conversation. It also shows the windows in the conversation in which healthcare was discussed as well as the length of that window.
  
 The dimensions below show the same information described for healthcare the other 5 themes.
-   - Number of Covid - Order of Speech
-   - Number of Economy - Time
-   - Number of Economy - Order of Speech
-   - Number of Environment - Time
-   - Number of Environment - Order of Speech
-   - Number of Race - Time
-   - Number of Race - Order of Speech
-   - Number of Election - Time
-   - Number of Election - Order of Speech
+   - Number of Covid-Order of Speech
+   - Number of Economy-Time
+   - Number of Economy-Order of Speech
+   - Number of Environment-Time
+   - Number of Environment-Order of Speech
+   - Number of Race-Time
+   - Number of Race-Order of Speech
+   - Number of Election-Time
+   - Number of Election-Order of Speech
  
    - Word Count-Theme: This dimension shows a total count of words related to a particular theme by each actor. It shows the weight that actors put on each theme in the 
      conversation and the weight of the theme in the conversation overall.
