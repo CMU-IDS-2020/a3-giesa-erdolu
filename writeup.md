@@ -8,7 +8,7 @@
 1.1 Aim
 
 The interest in our project was to trace and reveal the dynamics of a conversation through data visualization. We explored the potential of visualization to capture and 
-represent converstaional dynamics.
+represent conversational dynamics.
  
 1.2 Site and Data                                                                                                                                                              
 
@@ -79,7 +79,7 @@ To investigate the questions in Part 1, we defined:
      interrupted the most up to a certain order of speech in the conversation. It also shows how this number changed for each actor throughout the conversation.
    - Number of Crosstalks-Time: This dimension shows an incremental count of crosstalks* during an actor’s speech over the course of the conversation. It also shows the moments 
      of crosstalk. It provides hints about how this particular speech attitude occurred within a period or throughout the entire conversation. 
-     *Interruptions were marked as “[crosstalk hh:mm:ss]” in the transcript.
+     *Crosstalks were marked as “[crosstalk hh:mm:ss]” in the transcript.
    - Number of Crosstalks-Order of Speech: This dimension shows an incremental count of crosstalks during an actor’s speech over the course of the conversation. It shows 
      whose speeches were broken by the crosstalks the most up to a certain order of speech in the conversation. It also shows how this number changed for each actor throughout 
      the conversation.
