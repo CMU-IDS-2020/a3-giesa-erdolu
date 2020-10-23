@@ -117,7 +117,7 @@ The dimensions below show the same information described for healthcare the othe
      conversation and the weight of the theme in the conversation overall.
    - Word Count-Actor-Word: This dimension shows a total count of each thematic word used by each actor. It shows the emphasis that actors put on each thematic word and thereby 
      the theme in the conversation. 
-   - Word Count-Actor-Pointing to Self and Fingers to Others: This dimension shows a total count of “Pointing to Self and Fingers to Others” (PSFO) words (“you” “he” and “I”) 
+   - Word Count-Actor-Pointing to Self and Fingers to Others: This dimension shows a total count of “Pointing to Self and Fingers to Others” (PSFO) words (“you”, “he”, and “I”) 
      used by each actor. It shows the weight of pointing to self and pointing fingers to others by each actor in the conversation.  
  
 as the dimensions to be extracted as data by processing the conversation text and to be visualized for insights. All these dimensions involve the notion of “thematic weight” 
